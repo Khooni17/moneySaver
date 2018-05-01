@@ -35,10 +35,8 @@
       }
     },
     computed: {
-      ...mapGetters(['todayCash','todayDateHeader','goalName','tempMessage']),
-      moneyboxBar() {
-        return this.$store.state.moneyboxBar;
-      }
+      ...mapGetters(['moneyboxBar', 'todayCash', 'todayDateHeader', 'goalName', 'tempMessage']),
+
     },
     methods: {
 

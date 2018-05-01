@@ -70,8 +70,7 @@
   import MyHeader from './Header';
   import MyFooter from './MyFooter';
   import FormAddGoal from './FormAddGoal';
-  import { mapGetters } from 'vuex';
-  import { mapActions } from 'vuex';
+  import {mapGetters} from 'vuex';
 
 
   export default {
@@ -85,6 +84,9 @@
       }
 
       this.$store.commit('setJoin', d);
+      if (this.moneyboxBar >= 100) {
+        this.$store.dispatch('finishGoal');
+      }
     },
     data(){
       return {
@@ -102,7 +104,7 @@
       }
     },
     computed: {
-      ...mapGetters(['showCart','lastJoinDate','messsageMark','showMark','colorToday','colorYesterday','colorGapYesterday','colorMark','spent', 'colors', 'history', 'messageYesterday','timeGoalCreated','lastJoinDate','messageMark']),
+      ...mapGetters(['moneyboxBar', 'showCart', 'lastJoinDate', 'messsageMark', 'showMark', 'colorToday', 'colorYesterday', 'colorGapYesterday', 'colorMark', 'spent', 'colors', 'history', 'messageYesterday', 'timeGoalCreated', 'lastJoinDate', 'messageMark']),
     },
     methods:{
       showForm(e){

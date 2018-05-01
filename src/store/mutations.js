@@ -115,5 +115,11 @@ export default {
   },
   progress(state, progress) {
     state.moneyboxBar = progress;
+  },
+  finishGoal(state) {
+    state.goalFinished = true;
+  },
+  newGoal(state) {
+    state.goalAdded = false;
   }
 }

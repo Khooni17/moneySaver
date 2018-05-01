@@ -150,4 +150,12 @@ export default
       //-----------------------------------------------------------\\
       localStorage.setItem('state', JSON.stringify(store.state));
     },
+
+  finishGoal(store) {
+    store.commit('finishGoal');
+  },
+  newGoal(store) {
+    store.commit('newGoal');
+    localStorage.clear();
+  }
 }

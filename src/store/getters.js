@@ -41,8 +41,14 @@ export default {
   BAG(state){
     return state.BAG;
   },
+  moneyboxBar(state) {
+    return state.moneyboxBar;
+  },
   lastJoinDate(state){
     return state.lastJoinDate;
+  },
+  goalFinished(state) {
+    return state.goalFinished;
   },
   yStopTime(state){
     return state.yStopTime;
@@ -59,7 +65,9 @@ export default {
   tempThreeDays(state){
     return state.tempThreeDays;
   },
-
+  countDays(state) {
+    return state.countDays;
+  },
 
 
 

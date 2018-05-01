@@ -1,5 +1,6 @@
 const initState = JSON.parse(localStorage.getItem('state')) || {
   goalAdded: false,
+  goalFinished: false,
   goalName: '',
   messageYesterday: '',
   messageMark: '',
